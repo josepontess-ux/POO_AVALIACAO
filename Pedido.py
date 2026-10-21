@@ -24,3 +24,4 @@ def calcular_desconto(self, subtotal, cupom):
 
         return desconto
 
+ def classificar_pedido(self, subtotal):
