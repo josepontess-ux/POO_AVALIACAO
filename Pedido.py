@@ -5,3 +5,10 @@ class pedido:
     self.quantidade = quantidade
     self.preco_unitario = preco_unitario
     self.cupom = cupom.lower()
+
+def calcular_subtotal(self):
+    """
+    Retorna o Subtotal numérico.
+    """
+    subtotal = quantidade*preco_unitario
+    return subtotal
