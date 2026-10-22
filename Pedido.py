@@ -10,32 +10,32 @@ def calcular_subtotal(self):
     """
     Retorna o Subtotal numérico.
     """
-    subtotal = quantidade*preco_unitario
+    subtotal = self.quantidade*self.preco_unitario
     return subtotal
 
 def calcular_desconto(self, subtotal, cupom):
   """
   Retorna o valor do desconto
   """
-        if cupom == "sim":
-            desconto = subtotal * 0.10
-        else:
-            desconto = 0
+    if cupom == "sim":
+        desconto = subtotal * 0.10
+    else:
+        desconto = 0
 
-        return desconto
+    return desconto
 
  def classificar_pedido(self, subtotal):
    """
    Retorna a classificação do tipo do pedido
    """
-   if subtotal <= 30:
-            classificacao = "Pedido pequeno"
-        elif subtotal <= 100:
-            classificacao = "Pedido médio"
-        else:
-            classificacao = "Pedido grande"
+    if subtotal <= 30:
+        classificacao = "Pedido pequeno"
+    elif subtotal <= 100:
+        classificacao = "Pedido médio"
+    else:
+        classificacao = "Pedido grande"
 
-        return classificacao
+    return classificacao
 
 def exibir_resumo(self):
   """
