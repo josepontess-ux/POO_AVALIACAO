@@ -36,3 +36,5 @@ def calcular_desconto(self, subtotal, cupom):
             classificacao = "Pedido grande"
 
         return classificacao
+
+cupom = cupom.lower
