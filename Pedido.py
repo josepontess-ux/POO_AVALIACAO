@@ -43,3 +43,14 @@ subtotal = calcular_subtotal(quantidade, preco_unitario)
 desconto = calcular_desconto(subtotal, cupom)
 total = subtotal - desconto
 classificação = classificar_pedido(subtotal)
+
+print("===== RESUMO DO PEDIDO ======")
+print(f"Cliente: {nome}")
+print(f"Produto: {produto}")
+print(f"Quantidade: {quantidade}")
+print(f"Preço Unitário: R$ {preco_unitario:.2f}")
+print(f"Subtotal: R$ {subtotal:.2}")
+print(f"Desconto: R$ {desconto:.2}")
+print(f"Total: R$ {total:.2}")
+print(f"Classificação: {classificação}")
+
