@@ -38,3 +38,8 @@ def calcular_desconto(self, subtotal, cupom):
         return classificacao
 
 cupom = cupom.lower
+
+subtotal = calcular_subtotal(quantidade, preco_unitario)
+desconto = calcular_desconto(subtotal, cupom)
+total = subtotal - desconto
+classificação = classificar_pedido(subtotal)
