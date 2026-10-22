@@ -41,18 +41,24 @@ def exibir_resumo(self):
   """
   exebir o resumo do pedido, e o total
   """
-  subtotal = calcular_subtotal(quantidade, preco_unitario)
-  desconto = calcular_desconto(subtotal, cupom)
+  subtotal = self.calcular_subtotal()
+  desconto = calcular_desconto(subtotal, self.cupom)
   total = subtotal - desconto
-  classificação = classificar_pedido(subtotal)
+  classificação = self.classificar_pedido(subtotal)
 
-print("===== RESUMO DO PEDIDO ======")
-print(f"Cliente: {nome}")
-print(f"Produto: {produto}")
-print(f"Quantidade: {quantidade}")
-print(f"Preço Unitário: R$ {preco_unitario:.2f}")
-print(f"Subtotal: R$ {subtotal:.2}")
-print(f"Desconto: R$ {desconto:.2}")
-print(f"Total: R$ {total:.2}")
-print(f"Classificação: {classificação}")
+  print("===== RESUMO DO PEDIDO ======")
+  print(f"Cliente: {nome}")
+  print(f"Produto: {produto}")
+  print(f"Quantidade: {quantidade}")
+  print(f"Preço Unitário: R$ {preco_unitario:.2f}")
+  print(f"Subtotal: R$ {subtotal:.2}")
+  print(f"Desconto: R$ {desconto:.2}")
+  print(f"Total: R$ {total:.2}")
+  print(f"Classificação: {classificação}")
+
+pedido = Pedido("Felipe", "Hambúrguer", 3, 25.0, "SIM")
+
+
+pedido.exibir_resumo()
+
 
