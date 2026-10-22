@@ -37,12 +37,14 @@ def calcular_desconto(self, subtotal, cupom):
 
         return classificacao
 
-cupom = cupom.lower
-
-subtotal = calcular_subtotal(quantidade, preco_unitario)
-desconto = calcular_desconto(subtotal, cupom)
-total = subtotal - desconto
-classificação = classificar_pedido(subtotal)
+def exibir_resumo(self):
+  """
+  exebir o resumo do pedido, e o total
+  """
+  subtotal = calcular_subtotal(quantidade, preco_unitario)
+  desconto = calcular_desconto(subtotal, cupom)
+  total = subtotal - desconto
+  classificação = classificar_pedido(subtotal)
 
 print("===== RESUMO DO PEDIDO ======")
 print(f"Cliente: {nome}")
